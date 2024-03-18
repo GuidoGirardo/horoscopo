@@ -8,7 +8,11 @@
         android:id="@+id/horoscopeFragment"
         android:name="com.damaris.horoscopo.ui.horoscope.HoroscopeFragment"
         android:label="fragment_horoscope"
-        tools:layout="@layout/fragment_horoscope" />
+        tools:layout="@layout/fragment_horoscope" >
+        <action
+            android:id="@+id/action_horoscopeFragment_to_horoscopeDetailActivity"
+            app:destination="@id/horoscopeDetailActivity" />
+    </fragment>
     <fragment
         android:id="@+id/palmistryFragment"
         android:name="com.damaris.horoscopo.ui.palmistry.PalmistryFragment"
@@ -19,4 +23,13 @@
         android:name="com.damaris.horoscopo.ui.luck.LuckFragment"
         android:label="fragment_luck"
         tools:layout="@layout/fragment_luck" />
+    <activity
+        android:id="@+id/horoscopeDetailActivity"
+        android:name="com.damaris.horoscopo.ui.detail.HoroscopeDetailActivity"
+        android:label="activity_horoscope_detail"
+        tools:layout="@layout/activity_horoscope_detail" >
+        <argument
+            android:name="type"
+            app:argType="com.damaris.horoscopo.domain.model.HoroscopeModel" />
+    </activity>
 </navigation>
