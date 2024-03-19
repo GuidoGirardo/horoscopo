@@ -1,5 +1,6 @@
 package com.damaris.horoscopo.data.network.response
 
+import com.damaris.horoscopo.domain.model.PredictionModel
 import com.google.gson.annotations.SerializedName
 
 data class PredictionResponse(
@@ -7,10 +8,10 @@ data class PredictionResponse(
     @SerializedName("horoscope") val horoscope: String,
     @SerializedName("sign") val sign: String,
 ) {
-    /* fun toDomain(): PredictionModel {
+    fun toDomain(): PredictionModel {
         return PredictionModel(
             horoscope = horoscope,
             sign = sign
         )
-    }*/
+    }
 }
